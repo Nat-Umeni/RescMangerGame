@@ -14,7 +14,7 @@ public class MenuUIHandler : MonoBehaviour
 
     public void NewColorSelected(Color color)
     {
-        // add code here to handle when a color is selected
+        MainManager.Instance.TeamColor = color;
     }
 
     private void Start()
@@ -29,7 +29,7 @@ public class MenuUIHandler : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-      public void Exit()
+    public void Exit()
     {
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
